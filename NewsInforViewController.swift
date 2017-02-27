@@ -114,6 +114,7 @@ class NewsInforViewController: UIViewController, UICollectionViewDataSource, UIC
         cell.sugNewsImg.backgroundColor = UIColor.brown
         cell.sugNewsTitle.frame = CGRect(x: scHei*0.005, y: scHei*0.115, width: scHei*0.19, height: scHei*0.08)
         cell.sugNewsTitle.textColor = UIColor.white
+        cell.sugNewsTitle.text = ""
         cell.sugNewsTitle.contentMode = UIViewContentMode.top
         cell.sugNewsTitle.font = UIFont.boldSystemFont(ofSize: 10)
         cell.sugNewsTitle.backgroundColor = UIColor.blue
