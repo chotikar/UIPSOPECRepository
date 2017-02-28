@@ -32,14 +32,18 @@ class NewsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Newscell", for: indexPath) as! NewsCell
         
-        if (indexPath.row % 2) == 0 {
+        if indexPath.row == 0 {
             cell.newsImg.backgroundColor = UIColor.brown
-            cell.newsTitle.textAlignment = .right
-            cell.newsSubtitle.frame = CGRect(x: scWid*0.4, y: scHei*0.34, width: scWid*0.5, height: scHei*0.04)
-        }else {
+            cell.newsImg.frame = CGRect(x: 0, y: 0, width:scWid, height: scHei*0.4)
+            cell.newsTitle.isHidden = true
+            cell.newsSubtitle.isHidden = true
+        } else {
             cell.newsImg.backgroundColor = UIColor.red
-            cell.newsTitle.textAlignment = .left
-            cell.newsSubtitle.frame = CGRect(x: scWid*0.1, y: scHei*0.34, width: scWid*0.5, height: scHei*0.04)
+            cell.newsImg.frame = CGRect(x: scWid*0.035, y: scHei*0.0125, width: scWid*0.3, height: scHei*0.15)
+            cell.newsTitle.frame = CGRect(x: scWid*0.361, y: scHei*0.0125, width: scWid*0.595, height: scHei*0.06)
+            cell.newsTitle.backgroundColor = UIColor.black
+            cell.newsSubtitle.frame = CGRect(x: scWid*0.361, y: scHei*0.0775, width: scWid*0.595, height: scHei*0.0575)
+            cell.newsSubtitle.backgroundColor = UIColor.yellow
         }
         
         return cell
@@ -47,11 +51,17 @@ class NewsTableViewController: UITableViewController {
 
     // height of cell
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return scHei*0.4
+        if indexPath.row == 0 {
+            return scHei * 0.4
+        }else{
+            return scHei * 0.175
+        }
+        
     }
     
     // action when click each cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print (indexPath.row)
         let vc = storyboard?.instantiateViewController(withIdentifier: "NewsInformationLayout") as! NewsInforViewController
         vc.newssugestiontitle = "SUGGEST News"
         self.navigationController?.pushViewController(vc, animated: true)

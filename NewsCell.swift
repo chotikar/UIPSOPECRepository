@@ -13,19 +13,23 @@ class NewsCell: UITableViewCell {
     let scHei = UIScreen.main.bounds.height
     
     @IBOutlet weak var newsImg: UIImageView!
-    @IBOutlet weak var newsTitle: UILabel!
-    @IBOutlet weak var newsSubtitle: UILabel!
+    @IBOutlet weak var newsTitle: UITextView!
+    @IBOutlet weak var newsSubtitle: UITextView!
     
     
     override func awakeFromNib() {
-        newsImg.frame = CGRect(x: 0, y: 0, width:scWid, height: scHei*0.4)
-        newsTitle.frame = CGRect(x: scWid*0.1, y: scHei*0.27, width: scWid*0.8, height: scHei*0.06)
         newsTitle.textColor = UIColor.white
-        newsSubtitle.backgroundColor = UIColor.darkGray
-        newsSubtitle.textColor = UIColor.white
-        newsSubtitle.textAlignment = .center
+        newsTitle.font = UIFont.boldSystemFont(ofSize: 14)
+        newsTitle.textAlignment = .left
+        newsTitle.text = "Title"
+//        newsTitle.scrollsToTop = false
+        newsSubtitle.textColor = UIColor.black
+        newsSubtitle.font = UIFont.systemFont(ofSize: 8)
+        newsSubtitle.textAlignment = .left
+        newsSubtitle.text = "Sub Title"
+//        newsSubtitle.scrollsToTop = false
     }
-    
+//
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
