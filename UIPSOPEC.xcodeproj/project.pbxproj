@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4F2511EE1E5D4E7F0055D312 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2511ED1E5D4E7F0055D312 /* NewsTableViewController.swift */; };
-		4F2511F41E5D7F0A0055D312 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2511F31E5D7F0A0055D312 /* NewsCell.swift */; };
 		4F2511F61E5D8D9E0055D312 /* NewsInforViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2511F51E5D8D9E0055D312 /* NewsInforViewController.swift */; };
 		4F4A595D1E62DD4C00535C46 /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4A595C1E62DD4C00535C46 /* LocationTableViewController.swift */; };
 		4F4F8D521E517AE0004B4419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4F8D511E517AE0004B4419 /* AppDelegate.swift */; };
@@ -28,13 +27,15 @@
 		4F6010661E643FF300311509 /* TestGoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6010651E643FF300311509 /* TestGoogleViewController.swift */; };
 		4FE09F2D1E59F8410020A2C5 /* CRUDProfileDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE09F2C1E59F8410020A2C5 /* CRUDProfileDevice.swift */; };
 		4FE09F2F1E5A04BF0020A2C5 /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE09F2E1E5A04BF0020A2C5 /* ToastMessage.swift */; };
+		4FFC53091E65BFF700E220EF /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC53081E65BFF700E220EF /* NewsCell.swift */; };
+		4FFC530B1E65C04900E220EF /* SuggestionNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC530A1E65C04900E220EF /* SuggestionNewsCell.swift */; };
+		4FFC530D1E65C07700E220EF /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC530C1E65C07700E220EF /* LocationCell.swift */; };
 		6DF1C3E1A4DA36AE47BF5F2E /* Pods_UIPSOPEC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9F30573407E3145519A354 /* Pods_UIPSOPEC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A9F30573407E3145519A354 /* Pods_UIPSOPEC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIPSOPEC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F2511ED1E5D4E7F0055D312 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
-		4F2511F31E5D7F0A0055D312 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		4F2511F51E5D8D9E0055D312 /* NewsInforViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsInforViewController.swift; sourceTree = "<group>"; };
 		4F4A595C1E62DD4C00535C46 /* LocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
 		4F4F8D4E1E517AE0004B4419 /* UIPSOPEC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPSOPEC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +57,9 @@
 		4F6010651E643FF300311509 /* TestGoogleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestGoogleViewController.swift; sourceTree = "<group>"; };
 		4FE09F2C1E59F8410020A2C5 /* CRUDProfileDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRUDProfileDevice.swift; sourceTree = "<group>"; };
 		4FE09F2E1E5A04BF0020A2C5 /* ToastMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
+		4FFC53081E65BFF700E220EF /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		4FFC530A1E65C04900E220EF /* SuggestionNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionNewsCell.swift; sourceTree = "<group>"; };
+		4FFC530C1E65C07700E220EF /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		829F2D6DD9A0C9CFF209E3F8 /* Pods-UIPSOPEC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIPSOPEC.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIPSOPEC/Pods-UIPSOPEC.release.xcconfig"; sourceTree = "<group>"; };
 		D1587B5D2676B1EE902098CC /* Pods-UIPSOPEC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIPSOPEC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIPSOPEC/Pods-UIPSOPEC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,7 +142,9 @@
 				4F4F8D6E1E51832B004B4419 /* ChatMessageCell.swift */,
 				4F4F8D741E5194A9004B4419 /* UserCell.swift */,
 				4FE09F2E1E5A04BF0020A2C5 /* ToastMessage.swift */,
-				4F2511F31E5D7F0A0055D312 /* NewsCell.swift */,
+				4FFC53081E65BFF700E220EF /* NewsCell.swift */,
+				4FFC530A1E65C04900E220EF /* SuggestionNewsCell.swift */,
+				4FFC530C1E65C07700E220EF /* LocationCell.swift */,
 			);
 			name = MyDrawer;
 			sourceTree = "<group>";
@@ -296,16 +302,18 @@
 				4F4F8D6C1E51830C004B4419 /* FacultyChatAndLog.swift in Sources */,
 				4F4A595D1E62DD4C00535C46 /* LocationTableViewController.swift in Sources */,
 				4F4F8D5A1E517AE0004B4419 /* UIPSOPEC.xcdatamodeld in Sources */,
+				4FFC530B1E65C04900E220EF /* SuggestionNewsCell.swift in Sources */,
+				4FFC530D1E65C07700E220EF /* LocationCell.swift in Sources */,
 				4F4F8D731E5185D6004B4419 /* ChatLogTableViewController.swift in Sources */,
 				4FE09F2D1E59F8410020A2C5 /* CRUDProfileDevice.swift in Sources */,
 				4F4F8D6A1E51830C004B4419 /* ChatLog.swift in Sources */,
 				4F4F8D6F1E51832B004B4419 /* ChatMessageCell.swift in Sources */,
 				4F4F8D711E5185C4004B4419 /* MessageTableViewController.swift in Sources */,
+				4FFC53091E65BFF700E220EF /* NewsCell.swift in Sources */,
 				4F4F8D751E5194A9004B4419 /* UserCell.swift in Sources */,
 				4F6010661E643FF300311509 /* TestGoogleViewController.swift in Sources */,
 				4F4F8D521E517AE0004B4419 /* AppDelegate.swift in Sources */,
 				4F4F8D771E51B7F8004B4419 /* LoginViewController.swift in Sources */,
-				4F2511F41E5D7F0A0055D312 /* NewsCell.swift in Sources */,
 				4F2511EE1E5D4E7F0055D312 /* NewsTableViewController.swift in Sources */,
 				4FE09F2F1E5A04BF0020A2C5 /* ToastMessage.swift in Sources */,
 				4F2511F61E5D8D9E0055D312 /* NewsInforViewController.swift in Sources */,
