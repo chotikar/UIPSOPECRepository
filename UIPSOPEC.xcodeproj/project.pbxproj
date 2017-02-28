@@ -30,6 +30,7 @@
 		4FFC53091E65BFF700E220EF /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC53081E65BFF700E220EF /* NewsCell.swift */; };
 		4FFC530B1E65C04900E220EF /* SuggestionNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC530A1E65C04900E220EF /* SuggestionNewsCell.swift */; };
 		4FFC530D1E65C07700E220EF /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC530C1E65C07700E220EF /* LocationCell.swift */; };
+		4FFC530F1E65C98000E220EF /* ChatTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC530E1E65C98000E220EF /* ChatTest.swift */; };
 		6DF1C3E1A4DA36AE47BF5F2E /* Pods_UIPSOPEC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9F30573407E3145519A354 /* Pods_UIPSOPEC.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		4FFC53081E65BFF700E220EF /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		4FFC530A1E65C04900E220EF /* SuggestionNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionNewsCell.swift; sourceTree = "<group>"; };
 		4FFC530C1E65C07700E220EF /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		4FFC530E1E65C98000E220EF /* ChatTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTest.swift; sourceTree = "<group>"; };
 		829F2D6DD9A0C9CFF209E3F8 /* Pods-UIPSOPEC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIPSOPEC.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIPSOPEC/Pods-UIPSOPEC.release.xcconfig"; sourceTree = "<group>"; };
 		D1587B5D2676B1EE902098CC /* Pods-UIPSOPEC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIPSOPEC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIPSOPEC/Pods-UIPSOPEC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 				4F2511F51E5D8D9E0055D312 /* NewsInforViewController.swift */,
 				4F4A595C1E62DD4C00535C46 /* LocationTableViewController.swift */,
 				4F6010651E643FF300311509 /* TestGoogleViewController.swift */,
+				4FFC530E1E65C98000E220EF /* ChatTest.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				4F4F8D731E5185D6004B4419 /* ChatLogTableViewController.swift in Sources */,
 				4FE09F2D1E59F8410020A2C5 /* CRUDProfileDevice.swift in Sources */,
 				4F4F8D6A1E51830C004B4419 /* ChatLog.swift in Sources */,
+				4FFC530F1E65C98000E220EF /* ChatTest.swift in Sources */,
 				4F4F8D6F1E51832B004B4419 /* ChatMessageCell.swift in Sources */,
 				4F4F8D711E5185C4004B4419 /* MessageTableViewController.swift in Sources */,
 				4FFC53091E65BFF700E220EF /* NewsCell.swift in Sources */,
