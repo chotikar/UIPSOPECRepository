@@ -12,4 +12,5 @@ pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'GoogleMaps'
 pod 'GooglePlaces'
+pod 'SWRevealViewController'
 end

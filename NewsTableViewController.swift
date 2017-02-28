@@ -18,18 +18,17 @@ class NewsTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
-
+    //number of section in each row
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
+    // number of row
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 20
     }
 
+    //action in each cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Newscell", for: indexPath) as! NewsCell
         
@@ -46,31 +45,18 @@ class NewsTableViewController: UITableViewController {
         return cell
     }
 
+    // height of cell
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return scHei*0.4
     }
     
+    // action when click each cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "NewsInformationLayout") as! NewsInforViewController
         vc.newssugestiontitle = "SUGGEST News"
         self.navigationController?.pushViewController(vc, animated: true)
-//                self.navigationController?.pushViewController(vc, animated: true)
-
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        let vc = NewsInforViewController()
-//        self.navigationController?.pushViewController(vc, animated: true)
-    }
+   }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-////        tableView.deselectRow(at: indexPath, animated: true)
-//        let vc = NewsInforViewController()
-//        self.navigationController?.pushViewController(vc, animated: true)
-//      //  let vc = storyboard?.instantiateViewController(withIdentifier: "NewsInformationLayout") as! NewsInforViewController
-//        //self.navigationController?.pushViewController(vc, animated: true)
-//        
-//
-//    }
-//    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

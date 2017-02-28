@@ -4,6 +4,7 @@ import UIKit
 import FBSDKLoginKit
 import SystemConfiguration
 
+ // width and height of current Scrren
 let scWid = UIScreen.main.bounds.width
 let scHei = UIScreen.main.bounds.height
 
@@ -21,15 +22,6 @@ class LoginViewController: UIViewController , FBSDKLoginButtonDelegate{
         CRUDProfileDevice.ClearProfileDevice()
         let pfd = CRUDProfileDevice.GetUserProfile()
         
-        print("start profile device")
-        print(pfd)
-//        print (pfd.email)
-//        print (pfd.facebookAccessToken)
-//        print (pfd.facebookId)
-//        print (pfd.facebookName)
-//        print (pfd.udid)
-        print("*********************************************")
-
 //        udid = (UIDevice.current.identifierForVendor?.uuidString)! as String
 //            let loginButton = FBSDKLoginButton()
 //            view.addSubview(loginButton)
@@ -87,21 +79,6 @@ class LoginViewController: UIViewController , FBSDKLoginButtonDelegate{
                self.data = result as! [String : AnyObject]
                 print(self.udid)
                 self.userLoginDetail = UserLogInDetail(dic: self.data as AnyObject , token: self.tokenn,UDID:self.udid)
-//                print("*********************************************")
-//                print(self.userLoginDetail.email)
-//                print(self.userLoginDetail.facebookAccessToken)
-//                print(self.userLoginDetail.facebookId)
-//                print(self.userLoginDetail.facebookName)
-//                print(self.userLoginDetail.udid)
-//                let message = MessageTableViewController()
-//        self.present(message, animated: true, completion: nil)
-//                self.navigationController?.pushViewController(message, animated: true)
-                
-             //   let vc = self.storyboard?.instantiateViewController(withIdentifier: "MessageLAYOUT") as! MessageTableViewController
-             //   self.navigationController?.pushViewController(vc, animated: true)
-              //  print("*********************************************")
-                
-                
                 CRUDProfileDevice.SaveProfileDevice(loginInfor: self.userLoginDetail)
                 let pfd = CRUDProfileDevice.GetUserProfile()
                 
@@ -155,11 +132,5 @@ class LoginViewController: UIViewController , FBSDKLoginButtonDelegate{
             toastLabel.alpha = 0.0
         })
     }
-    
-//    func getProfileDevice() -> UserLogInDetail {
-//      return CRUDProfileDevice.GetUserProfile()
-//    }
-    //
-
     
 }

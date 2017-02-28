@@ -1,10 +1,3 @@
-//
-//  UserCell.swift
-//  UIPSOPEC
-//
-//  Created by Chotikar on 2/13/2560 BE.
-//  Copyright © 2560 Senior Project. All rights reserved.
-//
 
 import Foundation
 import UIKit
