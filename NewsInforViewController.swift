@@ -28,6 +28,8 @@ class NewsInforViewController: UIViewController, UICollectionViewDataSource, UIC
     
     var newssugestiontitle : String = ""
     
+    var facNewsList : [NewsModel]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.SuggestionNewsCollection.delegate = self
@@ -92,11 +94,12 @@ class NewsInforViewController: UIViewController, UICollectionViewDataSource, UIC
         
     }
     
+    
     ////** Collection view setting
     
     //number of row
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return facNewsList.count-1
     }
     
     //action each cell in collection view

@@ -10,6 +10,7 @@
 		4F2511EE1E5D4E7F0055D312 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2511ED1E5D4E7F0055D312 /* NewsTableViewController.swift */; };
 		4F2511F61E5D8D9E0055D312 /* NewsInforViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2511F51E5D8D9E0055D312 /* NewsInforViewController.swift */; };
 		4F4A595D1E62DD4C00535C46 /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4A595C1E62DD4C00535C46 /* LocationTableViewController.swift */; };
+		4F4AD4BE1E65E4BE00F509C5 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4AD4BD1E65E4BE00F509C5 /* NewsModel.swift */; };
 		4F4F8D521E517AE0004B4419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4F8D511E517AE0004B4419 /* AppDelegate.swift */; };
 		4F4F8D541E517AE0004B4419 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4F8D531E517AE0004B4419 /* ViewController.swift */; };
 		4F4F8D571E517AE0004B4419 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F4F8D551E517AE0004B4419 /* Main.storyboard */; };
@@ -25,6 +26,9 @@
 		4F4F8D751E5194A9004B4419 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4F8D741E5194A9004B4419 /* UserCell.swift */; };
 		4F4F8D771E51B7F8004B4419 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4F8D761E51B7F8004B4419 /* LoginViewController.swift */; };
 		4F6010661E643FF300311509 /* TestGoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6010651E643FF300311509 /* TestGoogleViewController.swift */; };
+		4F8247831E77F6FF00F2341C /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8247821E77F6FF00F2341C /* WebService.swift */; };
+		4F8247881E77FEEC00F2341C /* FacultyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8247871E77FEEC00F2341C /* FacultyModel.swift */; };
+		4F82478A1E78672B00F2341C /* FacultyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8247891E78672B00F2341C /* FacultyTableViewController.swift */; };
 		4FE09F2D1E59F8410020A2C5 /* CRUDProfileDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE09F2C1E59F8410020A2C5 /* CRUDProfileDevice.swift */; };
 		4FE09F2F1E5A04BF0020A2C5 /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE09F2E1E5A04BF0020A2C5 /* ToastMessage.swift */; };
 		4FFC53091E65BFF700E220EF /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC53081E65BFF700E220EF /* NewsCell.swift */; };
@@ -39,6 +43,7 @@
 		4F2511ED1E5D4E7F0055D312 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		4F2511F51E5D8D9E0055D312 /* NewsInforViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsInforViewController.swift; sourceTree = "<group>"; };
 		4F4A595C1E62DD4C00535C46 /* LocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
+		4F4AD4BD1E65E4BE00F509C5 /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		4F4F8D4E1E517AE0004B4419 /* UIPSOPEC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPSOPEC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4F8D511E517AE0004B4419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F4F8D531E517AE0004B4419 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +61,9 @@
 		4F4F8D741E5194A9004B4419 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		4F4F8D761E51B7F8004B4419 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = UIPSOPEC/LoginViewController.swift; sourceTree = "<group>"; };
 		4F6010651E643FF300311509 /* TestGoogleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestGoogleViewController.swift; sourceTree = "<group>"; };
+		4F8247821E77F6FF00F2341C /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebService.swift; path = UIPSOPEC/WebService.swift; sourceTree = "<group>"; };
+		4F8247871E77FEEC00F2341C /* FacultyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultyModel.swift; sourceTree = "<group>"; };
+		4F8247891E78672B00F2341C /* FacultyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultyTableViewController.swift; sourceTree = "<group>"; };
 		4FE09F2C1E59F8410020A2C5 /* CRUDProfileDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRUDProfileDevice.swift; sourceTree = "<group>"; };
 		4FE09F2E1E5A04BF0020A2C5 /* ToastMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
 		4FFC53081E65BFF700E220EF /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 				4F4A595C1E62DD4C00535C46 /* LocationTableViewController.swift */,
 				4F6010651E643FF300311509 /* TestGoogleViewController.swift */,
 				4FFC530E1E65C98000E220EF /* ChatTest.swift */,
+				4F8247891E78672B00F2341C /* FacultyTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -96,6 +105,7 @@
 		4F4F8D451E517AE0004B4419 = {
 			isa = PBXGroup;
 			children = (
+				4F8247861E77FE4E00F2341C /* Necessary */,
 				4F2511EC1E5D4E4D0055D312 /* Controller */,
 				4FE09F2B1E59F80A0020A2C5 /* CoreData */,
 				4F4F8D6D1E518316004B4419 /* MyDrawer */,
@@ -135,6 +145,8 @@
 				4F4F8D671E51830C004B4419 /* ChatLog.swift */,
 				4F4F8D681E51830C004B4419 /* UserLogInDetail.swift */,
 				4F4F8D691E51830C004B4419 /* FacultyChatAndLog.swift */,
+				4F4AD4BD1E65E4BE00F509C5 /* NewsModel.swift */,
+				4F8247871E77FEEC00F2341C /* FacultyModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -150,6 +162,14 @@
 				4FFC530C1E65C07700E220EF /* LocationCell.swift */,
 			);
 			name = MyDrawer;
+			sourceTree = "<group>";
+		};
+		4F8247861E77FE4E00F2341C /* Necessary */ = {
+			isa = PBXGroup;
+			children = (
+				4F8247821E77F6FF00F2341C /* WebService.swift */,
+			);
+			name = Necessary;
 			sourceTree = "<group>";
 		};
 		4FE09F2B1E59F80A0020A2C5 /* CoreData */ = {
@@ -306,13 +326,17 @@
 				4F4A595D1E62DD4C00535C46 /* LocationTableViewController.swift in Sources */,
 				4F4F8D5A1E517AE0004B4419 /* UIPSOPEC.xcdatamodeld in Sources */,
 				4FFC530B1E65C04900E220EF /* SuggestionNewsCell.swift in Sources */,
+				4F8247881E77FEEC00F2341C /* FacultyModel.swift in Sources */,
+				4F4AD4BE1E65E4BE00F509C5 /* NewsModel.swift in Sources */,
 				4FFC530D1E65C07700E220EF /* LocationCell.swift in Sources */,
 				4F4F8D731E5185D6004B4419 /* ChatLogTableViewController.swift in Sources */,
 				4FE09F2D1E59F8410020A2C5 /* CRUDProfileDevice.swift in Sources */,
+				4F8247831E77F6FF00F2341C /* WebService.swift in Sources */,
 				4F4F8D6A1E51830C004B4419 /* ChatLog.swift in Sources */,
 				4FFC530F1E65C98000E220EF /* ChatTest.swift in Sources */,
 				4F4F8D6F1E51832B004B4419 /* ChatMessageCell.swift in Sources */,
 				4F4F8D711E5185C4004B4419 /* MessageTableViewController.swift in Sources */,
+				4F82478A1E78672B00F2341C /* FacultyTableViewController.swift in Sources */,
 				4FFC53091E65BFF700E220EF /* NewsCell.swift in Sources */,
 				4F4F8D751E5194A9004B4419 /* UserCell.swift in Sources */,
 				4F6010661E643FF300311509 /* TestGoogleViewController.swift in Sources */,

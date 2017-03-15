@@ -3,6 +3,8 @@ import UIKit
 
 class NewsTableViewController: UITableViewController {
     
+    var allNewsList : [NewsModel]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +33,12 @@ class NewsTableViewController: UITableViewController {
     //action in each cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Newscell", for: indexPath) as! NewsCell
+//        var news = allNewsList[indexPath.row]
+        //http://www.publicdomainpictures.net/pictures/40000/velka/white-daisy-flower.jpg
+        
+        let url = NSURL(string:"www.publicdomainpictures.net/pictures/40000/velka/white-daisy-flower.jpg")
+        let data = NSData(contentsOf:url! as URL)
+        cell.newsImg.image = UIImage(data:data as! Data)
         
         if indexPath.row == 0 {
             cell.newsImg.backgroundColor = UIColor.brown
@@ -61,11 +69,28 @@ class NewsTableViewController: UITableViewController {
     
     // action when click each cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print (indexPath.row)
+        var fnl :[NewsModel]!
+        fnl.append(allNewsList[indexPath.row])
+        let firstFac = allNewsList[indexPath.row]
+        for c in allNewsList {
+            if c.source == firstFac.source {
+                fnl.append(c)
+            }
+        }
+        
         let vc = storyboard?.instantiateViewController(withIdentifier: "NewsInformationLayout") as! NewsInforViewController
-        vc.newssugestiontitle = "SUGGEST News"
+        vc.facNewsList = fnl
         self.navigationController?.pushViewController(vc, animated: true)
    }
+    
+//    func loadImage (imgLink : String) -> UIImage {
+//    
+//        var url:URL = URL.fileURL(withPath: imgLink)
+//        var data:NSData = NSData.init(contentsOf: url as URL, options: nil)//.dataWithContentsOfURL(url, options: nil, error: nil)
+//        
+//        return UIImage.imageWithData(data)
+//    }
+//    }
     
     /*
     // Override to support conditional editing of the table view.
