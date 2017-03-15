@@ -32,6 +32,10 @@
 		4FFC530D1E65C07700E220EF /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC530C1E65C07700E220EF /* LocationCell.swift */; };
 		6DF1C3E1A4DA36AE47BF5F2E /* Pods_UIPSOPEC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9F30573407E3145519A354 /* Pods_UIPSOPEC.framework */; };
 		7584C19F1E65D21F005FC153 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7584C19E1E65D21F005FC153 /* ContactUsViewController.swift */; };
+		75CFAD091E796FA0002846E6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CFAD081E796FA0002846E6 /* CalendarViewController.swift */; };
+		75CFAD0B1E797156002846E6 /* ApplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CFAD0A1E797156002846E6 /* ApplyViewController.swift */; };
+		75CFAD0D1E797219002846E6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CFAD0C1E797219002846E6 /* MapViewController.swift */; };
+		75F287261E7963B0004263AB /* FacultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F287251E7963B0004263AB /* FacultyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		4FFC530A1E65C04900E220EF /* SuggestionNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionNewsCell.swift; sourceTree = "<group>"; };
 		4FFC530C1E65C07700E220EF /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		7584C19E1E65D21F005FC153 /* ContactUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		75CFAD081E796FA0002846E6 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		75CFAD0A1E797156002846E6 /* ApplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyViewController.swift; sourceTree = "<group>"; };
+		75CFAD0C1E797219002846E6 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		75F287251E7963B0004263AB /* FacultyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultyViewController.swift; sourceTree = "<group>"; };
 		829F2D6DD9A0C9CFF209E3F8 /* Pods-UIPSOPEC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIPSOPEC.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIPSOPEC/Pods-UIPSOPEC.release.xcconfig"; sourceTree = "<group>"; };
 		D1587B5D2676B1EE902098CC /* Pods-UIPSOPEC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIPSOPEC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UIPSOPEC/Pods-UIPSOPEC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +89,9 @@
 		4F2511EC1E5D4E4D0055D312 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				75CFAD0C1E797219002846E6 /* MapViewController.swift */,
+				75CFAD0A1E797156002846E6 /* ApplyViewController.swift */,
+				75CFAD081E796FA0002846E6 /* CalendarViewController.swift */,
 				4F4F8D701E5185C4004B4419 /* MessageTableViewController.swift */,
 				4F4F8D721E5185D6004B4419 /* ChatLogTableViewController.swift */,
 				4F4F8D761E51B7F8004B4419 /* LoginViewController.swift */,
@@ -89,6 +100,7 @@
 				4F4A595C1E62DD4C00535C46 /* LocationTableViewController.swift */,
 				4F6010651E643FF300311509 /* TestGoogleViewController.swift */,
 				7584C19E1E65D21F005FC153 /* ContactUsViewController.swift */,
+				75F287251E7963B0004263AB /* FacultyViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -304,9 +316,13 @@
 				4F4F8D541E517AE0004B4419 /* ViewController.swift in Sources */,
 				7584C19F1E65D21F005FC153 /* ContactUsViewController.swift in Sources */,
 				4F4F8D6C1E51830C004B4419 /* FacultyChatAndLog.swift in Sources */,
+				75CFAD091E796FA0002846E6 /* CalendarViewController.swift in Sources */,
 				4F4A595D1E62DD4C00535C46 /* LocationTableViewController.swift in Sources */,
 				4F4F8D5A1E517AE0004B4419 /* UIPSOPEC.xcdatamodeld in Sources */,
 				4FFC530B1E65C04900E220EF /* SuggestionNewsCell.swift in Sources */,
+				75CFAD0D1E797219002846E6 /* MapViewController.swift in Sources */,
+				75F287261E7963B0004263AB /* FacultyViewController.swift in Sources */,
+				75CFAD0B1E797156002846E6 /* ApplyViewController.swift in Sources */,
 				4FFC530D1E65C07700E220EF /* LocationCell.swift in Sources */,
 				4F4F8D731E5185D6004B4419 /* ChatLogTableViewController.swift in Sources */,
 				4FE09F2D1E59F8410020A2C5 /* CRUDProfileDevice.swift in Sources */,

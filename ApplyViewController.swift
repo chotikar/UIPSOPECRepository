@@ -1,22 +1,24 @@
 //
-//  ContactUsViewController.swift
+//  ApplyViewController.swift
 //  UIPSOPEC
 //
-//  Created by Popp on 2/28/17.
+//  Created by Popp on 3/15/17.
 //  Copyright © 2017 Senior Project. All rights reserved.
+//
 
+import Foundation
 import UIKit
 import SWRevealViewController
 
-class ContactUsViewController : UIViewController {
+class ApplyViewController: UIViewController {
 
     @IBOutlet weak var MenuButton: UIBarButtonItem!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         Sidemenu()
         
     }
+    
     
     func Sidemenu() {
         if revealViewController() != nil {
@@ -28,4 +30,5 @@ class ContactUsViewController : UIViewController {
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
+
 }
