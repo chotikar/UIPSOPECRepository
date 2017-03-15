@@ -1,18 +1,14 @@
-//
-//  FacultyTableViewController.swift
-//  UIPSOPEC
-//
-//  Created by Chotikar on 3/15/2560 BE.
-//  Copyright © 2560 Senior Project. All rights reserved.
-//
 
 import UIKit
 
 class FacultyTableViewController: UITableViewController {
 
+    var faclist : [FacultyModel] = []
+    let facCellItemId = "FacultyCellItem"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        reloadTableViewInFac()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -25,71 +21,107 @@ class FacultyTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    func reloadTableViewInFac(){
+        WebService.GetFacultyWS() { (responseData: [FacultyModel], nil) in
+            DispatchQueue.main.async( execute: {
+                self.faclist = responseData
+                self.tableView.reloadData()
+            })
+        }
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.faclist.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: facCellItemId, for: indexPath) as! FacultyCell
+        cell.selectionStyle = .none
+        let facultyDetail = self.faclist[indexPath.row]
+        cell.logo.image = UIImage(named: "vme_logo")
+        cell.facView.image = UIImage(named: "abaccl")
+        cell.name.text = facultyDetail.facultyNameEn
+        cell.abb.text = facultyDetail.facultyAbb
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return scHei*0.4
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MajorLayout") as! MajorViewController
+        vc.facultyCode = self.faclist[indexPath.row].faculyId
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    */
+}
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+class FacultyCell : UITableViewCell {
+    
+    @IBOutlet var facView : UIImageView!
+    @IBOutlet var name : UILabel!
+    @IBOutlet var abb : UILabel!
+    @IBOutlet var logo : UIImageView!
+    @IBOutlet var whiteBox : UIView!
+    
+   //   @IBOutlet var name : UILabel? = {
+//    var nameL = UILabel()
+//    nameL.font = UIFont.systemFont(ofSize: 10)
+//    nameL.textColor = UIColor.white
+//    nameL.textAlignment = NSTextAlignment.center
+//        return nameL
+//    }()
+//    @IBOutlet var abb : UILabel? = {
+//        var abbL = UILabel()
+//        abbL.font = UIFont.boldSystemFont(ofSize: 20)
+//        abbL.textColor = UIColor.white
+//        return abbL
+//    }()
+  
+     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.contentView.addSubview(facView)
+        self.contentView.addSubview(logo)
+        self.contentView.addSubview(name)
+        self.contentView.addSubview(abb)
+        self.contentView.addSubview(whiteBox)
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        //fatalError("init(coder:) has not been implemented")
     }
-    */
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        logo.frame.size = CGSize(width: scWid*0.3, height: scWid*0.3)
+        logo.center = CGPoint(x: scWid/2, y: scWid*0.17)
+//        logo.layer.cornerRadius = logo.frame.size.width/2
+//        logo.clipsToBounds = true
+        
+        facView.frame = CGRect(x: 0, y: scHei*0.1, width: scWid, height: scHei*0.3)
+        facView.alpha = 0.8
+        
+        var buttom = logo.frame.origin.y+scWid*0.3
+        let speceAvi = (scHei*0.4)-buttom
+        abb.frame = CGRect(x: scWid * 0.2, y: buttom+(speceAvi*0.15), width: scWid*0.6, height: speceAvi*0.3)
+        abb.textAlignment = NSTextAlignment.center
+        abb.font = UIFont.boldSystemFont(ofSize: 25)
+        abb.textColor = UIColor.darkGray
+        
+        
+        buttom = abb.frame.origin.y + (speceAvi*0.3)
+        name.frame = CGRect(x: scWid * 0.05, y: buttom, width: scWid*0.9, height: speceAvi*0.3)
+        name.textAlignment = NSTextAlignment.center
+        name.font = UIFont.systemFont(ofSize: 15)
+        name.textColor = UIColor.darkGray
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        whiteBox.frame = CGRect(x: 0, y: abb.frame.origin.y, width: scWid, height: speceAvi*0.6)
+        whiteBox.alpha = 0.65
     }
-    */
-
 }
