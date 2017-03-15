@@ -4,8 +4,12 @@ import Foundation
 
 class NewsInforViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var scoll : UIScrollView!
-    var SuggestionNewsCollection: UICollectionView!
+    let scoll : UIScrollView = {
+        var sc = UIScrollView()
+        sc.frame = CGRect(x: 0, y: 0, width: scWid, height: scHei)
+        return sc
+    }()
+    @IBOutlet var SuggestionNewsCollection: UICollectionView!
     var mainImage : UIImageView!
     var newsTitle : UILabel!
     var newsSubtitle : UILabel!
@@ -36,6 +40,7 @@ class NewsInforViewController: UIViewController, UICollectionViewDataSource, UIC
         self.SuggestionNewsCollection.dataSource = self
         self.view.addSubview(scoll)
         self.view.addSubview(SuggestionNewsCollection)
+//        self.scoll.frame = CGRect(x: 0, y: 0, width: scWid, height: scHei)
         scoll.backgroundColor = UIColor.blue
         setcv(contentSize: drawNewsInformation())
         
@@ -50,7 +55,8 @@ class NewsInforViewController: UIViewController, UICollectionViewDataSource, UIC
     func setcv(contentSize : CGFloat){
         self.SuggestionNewsCollection.frame = CGRect(x: scWid*0.05, y: contentSize, width: scWid*0.95, height: scHei*0.2)
         self.SuggestionNewsCollection.backgroundColor = UIColor.red
-        self.scoll.frame = CGRect(x: 0, y: 0, width: scWid, height: scHei)
+        self.scoll.addSubview(self.SuggestionNewsCollection)
+        self.scoll.contentSize = CGSize(width: scWid, height: contentSize+scHei*0.2)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         self.SuggestionNewsCollection.collectionViewLayout = layout
@@ -61,13 +67,11 @@ class NewsInforViewController: UIViewController, UICollectionViewDataSource, UIC
     var containHei : CGFloat = 0
     
     // draw News Infromation layout
-    func drawNewsInformation() -> CGFloat{
+    func drawNewsInformation() -> CGFloat {
         var heiCon : CGFloat = 0
         mainImage = UIImageView(frame: CGRect(x: 0, y: scWid * 0.05, width: scWid, height: scWid*0.7))
         mainImage.backgroundColor = UIColor.yellow
         self.scoll.addSubview(mainImage)
-//        heiCon =  heiCon + mainImage.frame.
-        
         newsTitle = UILabel(frame: CGRect(x: scWid * 0.05, y: scWid * 0.8, width: scWid * 0.9, height: scWid * 0.1))
         newsTitle.backgroundColor = UIColor.brown
         self.scoll.addSubview(newsTitle)
@@ -90,7 +94,8 @@ class NewsInforViewController: UIViewController, UICollectionViewDataSource, UIC
         news.font = UIFont.systemFont(ofSize: 13)
         news.backgroundColor = UIColor.green
         self.scoll.addSubview(news)
-         return (self.news.frame.origin.y + self.news.frame.height + scWid*0.1 + (self.navigationController?.navigationBar.frame.height)!)
+         return (self.news.frame.origin.y + self.news.frame.height + scWid*0.1)
+//         (self.news.frame.origin.y + self.news.frame.height + scWid*0.1 + (self.navigationController?.navigationBar.frame.height)!) 
         
     }
     
@@ -99,7 +104,7 @@ class NewsInforViewController: UIViewController, UICollectionViewDataSource, UIC
     
     //number of row
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return facNewsList.count-1
+        return 10//facNewsList.count-1
     }
     
     //action each cell in collection view
@@ -146,5 +151,12 @@ class NewsInforViewController: UIViewController, UICollectionViewDataSource, UIC
     }
     */
 
+}
+
+class SuggestionNewsCell : UICollectionViewCell {
+    
+    @IBOutlet var sugNewsImg : UIImageView!
+    @IBOutlet var sugNewsTitle : UILabel!
+    
 }
 

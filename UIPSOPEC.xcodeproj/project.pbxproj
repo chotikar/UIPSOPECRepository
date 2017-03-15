@@ -32,7 +32,6 @@
 		4FE09F2D1E59F8410020A2C5 /* CRUDProfileDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE09F2C1E59F8410020A2C5 /* CRUDProfileDevice.swift */; };
 		4FE09F2F1E5A04BF0020A2C5 /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE09F2E1E5A04BF0020A2C5 /* ToastMessage.swift */; };
 		4FFC53091E65BFF700E220EF /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC53081E65BFF700E220EF /* NewsCell.swift */; };
-		4FFC530B1E65C04900E220EF /* SuggestionNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC530A1E65C04900E220EF /* SuggestionNewsCell.swift */; };
 		4FFC530D1E65C07700E220EF /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC530C1E65C07700E220EF /* LocationCell.swift */; };
 		4FFC530F1E65C98000E220EF /* ChatTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC530E1E65C98000E220EF /* ChatTest.swift */; };
 		6DF1C3E1A4DA36AE47BF5F2E /* Pods_UIPSOPEC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9F30573407E3145519A354 /* Pods_UIPSOPEC.framework */; };
@@ -67,7 +66,6 @@
 		4FE09F2C1E59F8410020A2C5 /* CRUDProfileDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRUDProfileDevice.swift; sourceTree = "<group>"; };
 		4FE09F2E1E5A04BF0020A2C5 /* ToastMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
 		4FFC53081E65BFF700E220EF /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
-		4FFC530A1E65C04900E220EF /* SuggestionNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionNewsCell.swift; sourceTree = "<group>"; };
 		4FFC530C1E65C07700E220EF /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		4FFC530E1E65C98000E220EF /* ChatTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTest.swift; sourceTree = "<group>"; };
 		829F2D6DD9A0C9CFF209E3F8 /* Pods-UIPSOPEC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIPSOPEC.release.xcconfig"; path = "Pods/Target Support Files/Pods-UIPSOPEC/Pods-UIPSOPEC.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 				4F4F8D741E5194A9004B4419 /* UserCell.swift */,
 				4FE09F2E1E5A04BF0020A2C5 /* ToastMessage.swift */,
 				4FFC53081E65BFF700E220EF /* NewsCell.swift */,
-				4FFC530A1E65C04900E220EF /* SuggestionNewsCell.swift */,
 				4FFC530C1E65C07700E220EF /* LocationCell.swift */,
 			);
 			name = MyDrawer;
@@ -232,6 +229,7 @@
 				TargetAttributes = {
 					4F4F8D4D1E517AE0004B4419 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = V9FZ24KV7T;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -325,7 +323,6 @@
 				4F4F8D6C1E51830C004B4419 /* FacultyChatAndLog.swift in Sources */,
 				4F4A595D1E62DD4C00535C46 /* LocationTableViewController.swift in Sources */,
 				4F4F8D5A1E517AE0004B4419 /* UIPSOPEC.xcdatamodeld in Sources */,
-				4FFC530B1E65C04900E220EF /* SuggestionNewsCell.swift in Sources */,
 				4F8247881E77FEEC00F2341C /* FacultyModel.swift in Sources */,
 				4F4AD4BE1E65E4BE00F509C5 /* NewsModel.swift in Sources */,
 				4FFC530D1E65C07700E220EF /* LocationCell.swift in Sources */,
@@ -466,11 +463,14 @@
 			baseConfigurationReference = D1587B5D2676B1EE902098CC /* Pods-UIPSOPEC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UIPSOPEC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Senior-Project.UIPSOPEC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -479,11 +479,14 @@
 			baseConfigurationReference = 829F2D6DD9A0C9CFF209E3F8 /* Pods-UIPSOPEC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UIPSOPEC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Senior-Project.UIPSOPEC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

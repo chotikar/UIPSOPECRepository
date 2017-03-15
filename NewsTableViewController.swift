@@ -36,9 +36,9 @@ class NewsTableViewController: UITableViewController {
 //        var news = allNewsList[indexPath.row]
         //http://www.publicdomainpictures.net/pictures/40000/velka/white-daisy-flower.jpg
         
-        let url = NSURL(string:"www.publicdomainpictures.net/pictures/40000/velka/white-daisy-flower.jpg")
-        let data = NSData(contentsOf:url! as URL)
-        cell.newsImg.image = UIImage(data:data as! Data)
+//        let url = NSURL(string:"www.publicdomainpictures.net/pictures/40000/velka/white-daisy-flower.jpg")
+//        let data = NSData(contentsOf:url! as URL)
+//        cell.newsImg.image = UIImage(data:data as! Data)
         
         if indexPath.row == 0 {
             cell.newsImg.backgroundColor = UIColor.brown
