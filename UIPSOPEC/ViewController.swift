@@ -8,7 +8,7 @@
 
 import UIKit
 import SwiftR
-
+import SWRevealViewController
 
 class ViewController: UIViewController {
 
@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         headerSize = CGFloat((self.navigationController?.navigationBar.frame.size.height)!+(UIApplication.shared.statusBarFrame.height))
         lastborder = headerSize

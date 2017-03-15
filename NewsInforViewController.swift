@@ -3,17 +3,8 @@ import UIKit
 import Foundation
 
 class NewsInforViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-//    let scoll : UIScrollView = {
-//      let s = UIScrollView()
-//        return s
-//    }()
-//    
-//    let SuggestionNewsCollection: UICollectionView = {
-//       let snc = UICollectionView()
-//        return snc
-//    }()
-    var scoll : UIScrollView!
     
+    var scoll : UIScrollView!
     var SuggestionNewsCollection: UICollectionView!
     var mainImage : UIImageView!
     var newsTitle : UILabel!
@@ -63,8 +54,11 @@ class NewsInforViewController: UIViewController, UICollectionViewDataSource, UIC
         self.SuggestionNewsCollection.collectionViewLayout = layout
 
     }
+    
+    
     var containHei : CGFloat = 0
     
+    // draw News Infromation layout
     func drawNewsInformation() -> CGFloat{
         var heiCon : CGFloat = 0
         mainImage = UIImageView(frame: CGRect(x: 0, y: scWid * 0.05, width: scWid, height: scWid*0.7))
@@ -94,20 +88,18 @@ class NewsInforViewController: UIViewController, UICollectionViewDataSource, UIC
         news.font = UIFont.systemFont(ofSize: 13)
         news.backgroundColor = UIColor.green
         self.scoll.addSubview(news)
-//        heiCon = (self.navigationController?.navigationBar.frame.height)! + news.frame.maxY + scWid*0.06
-//        print(heiCon)
-//        print(news.frame.height)
-//        print(news.frame.origin.y)
-//        return (news.frame.origin.y + scWid*0.06)
-//        return heiCon
          return (self.news.frame.origin.y + self.news.frame.height + scWid*0.1 + (self.navigationController?.navigationBar.frame.height)!)
         
     }
     
+    ////** Collection view setting
+    
+    //number of row
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 15
     }
     
+    //action each cell in collection view
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "suggestionNewsItem", for: indexPath) as! SuggestionNewsCell
         cell.sugNewsImg.frame = CGRect(x: scHei*0.005, y: scHei*0.01, width: scHei*0.19, height: scHei*0.1)
@@ -121,22 +113,24 @@ class NewsInforViewController: UIViewController, UICollectionViewDataSource, UIC
         return cell
     }
     
+    //with and height of cell
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         cell.frame.size = CGSize(width: scHei*0.2, height: scHei*0.2)
         cell.backgroundColor = UIColor.yellow
     }
-
+    
+    //width and height of space in each cell
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
         return  CGSize(width: scHei*0.2, height: scHei*0.2)
     }
     
+    /// enatimata height of box from string and size of string
     private func estimateFrameForText(text:String) -> CGRect {
         let size = CGSize(width: 200, height: 1000)
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
         return NSString(string: text).boundingRect(with: size, options: options, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 13)], context: nil)
-        
     }
  
     /*
@@ -151,9 +145,3 @@ class NewsInforViewController: UIViewController, UICollectionViewDataSource, UIC
 
 }
 
-class SuggestionNewsCell : UICollectionViewCell {
-    
-    var sugNewsImg : UIImageView!
-    var sugNewsTitle : UITextView!
- 
-}
